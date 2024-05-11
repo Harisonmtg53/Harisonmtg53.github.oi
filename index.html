@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Página no GitHub</title>
+    <title>Exibição de Data e Hora</title>
+    <script>
+        function exibirDataHora() {
+            // Obter a data e hora atual
+            var dataHora = new Date();
+
+            // Formatar a data e hora
+            var dataFormatada = dataHora.toLocaleDateString();
+            var horaFormatada = dataHora.toLocaleTimeString();
+
+            // Exibir a data e hora na página
+            document.getElementById("data").innerHTML = "Data: " + dataFormatada;
+            document.getElementById("hora").innerHTML = "Hora: " + horaFormatada;
+        }
+
+        // Chamar a função para exibir data e hora assim que a página carregar
+        window.onload = exibirDataHora;
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
